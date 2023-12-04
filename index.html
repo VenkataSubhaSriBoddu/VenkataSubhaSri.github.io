@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-like Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background: #000;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+        }
+
+        .slider-item {
+            flex: 0 0 200px;
+        }
+
+        .player {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .watchlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .watchlist-item {
+            width: 200px;
+            text-align: center;
+        }
+
+        .payment-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Netflix-like Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Browse</a>
+        <a href="#">Search</a>
+        <a href="#">Watchlist</a>
+        <a href="#">Account</a>
+    </nav>
+
+    <section>
+        <h2>Featured Content</h2>
+        <div class="slider">
+            <div class="slider-item">
+                <img src="movie1.jpg" alt="Movie 1">
+                <p>Movie 1</p>
+                <button onclick="playVideo('movie1')">Play</button>
+            </div>
+            <div class="slider-item">
+                <img src="movie2.jpg" alt="Movie 2">
+                <p>Movie 2</p>
+                <button onclick="playVideo('movie2')">Play</button>
+            </div>
+            <!-- Add more content as needed -->
+        </div>
+    </section>
+
+    <section class="player">
+        <h2>Now Playing</h2>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Watchlist</h2>
+        <div class="watchlist">
+            <div class="watchlist-item">
+                <img src="movie3.jpg" alt="Movie 3">
+                <p>Movie 3</p>
+                <button onclick="addToWatchlist('movie3')">Add to Watchlist</button>
+            </div>
+            <div class="watchlist-item">
+                <img src="movie4.jpg" alt="Movie 4">
+                <p>Movie 4</p>
+                <button onclick="addToWatchlist('movie4')">Add to Watchlist</button>
+            </div>
+            <!-- Add more watchlist items as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Payment</h2>
+        <div class="payment-form">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+            <br>
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+            <br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123">
+            <br>
+            <button onclick="processPayment()">Submit Payment</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Netflix-like Website</p>
+    </footer>
+
+    <script>
+        function playVideo(videoName) {
+            // Implement logic to play the selected video
+            console.log('Playing video:', videoName);
+        }
+
+        function addToWatchlist(movieName) {
+            // Implement logic to add the movie to the user's watchlist
+            console.log('Added to watchlist:', movieName);
+        }
+
+        function processPayment() {
+            // Implement logic to process the payment
+            console.log('Payment processed successfully');
+        }
+    </script>
+</body>
+</html>
